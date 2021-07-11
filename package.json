@@ -1,0 +1,53 @@
+{
+  "name": "soulswap-core",
+  "description": "🕯 Core contracts for the SoulSwap Exchange",
+  "version": "0.1.0",
+  "homepage": "https://soulswap.finance",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soulswapfinance/soulswap-core"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "waffle .waffle.json",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "prepublishOnly": "yarn test",
+    "flat:factory": "truffle-flattener contracts/SoulSwapFactory.sol > flats/SoulSwapFactory_flat.sol",
+    "flat:pair": "truffle-flattener contracts/SoulSwapPair.sol > flats/SoulSwapPair_flat.sol"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "ethereumjs-util": "^6.2.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "solc": "^0.5.16",
+    "truffle-plugin-verify": "^0.4.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "truffle": "^5.2.6",
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-verify": "^1.0.8",
+    "waffle": "^0.0.4"
+  }
+}
