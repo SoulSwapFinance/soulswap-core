@@ -1,0 +1,252 @@
+{
+  "contractName": "IMigrator",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "desiredLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"desiredLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IMigrator.sol\":\"IMigrator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IMigrator.sol\":{\"keccak256\":\"0x224a6a7ce8c42b177369303e76ec034706c8220efb85fab2a0fe3fca69e49474\",\"urls\":[\"bzz-raw://1c73eea0d6fc19fd798da3f80f02602569eacfe195ba4057c1311ca3da64d731\",\"dweb:/ipfs/QmTEmkot3XKDuJQSH4LVX6KG2EX6VvK6pHSSwBv56q1GPE\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.5.16;\n\ninterface IMigrator {\n    // Return the desired amount of liquidity token that the migrator wants.\n    function desiredLiquidity() external view returns (uint256);\n}",
+  "sourcePath": "/Users/unico/Documents/GitHub/SoulSwap/soulswap-core/contracts/interfaces/IMigrator.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IMigrator.sol",
+    "exportedSymbols": {
+      "IMigrator": [
+        1816
+      ]
+    },
+    "id": 1817,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1810,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:25:5"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1816,
+        "linearizedBaseContracts": [
+          1816
+        ],
+        "name": "IMigrator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1815,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "desiredLiquidity",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1811,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "188:2:5"
+            },
+            "returnParameters": {
+              "id": 1814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1813,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1815,
+                  "src": "214:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1812,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:9:5"
+            },
+            "scope": 1816,
+            "src": "163:60:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1817,
+        "src": "60:165:5"
+      }
+    ],
+    "src": "33:192:5"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/interfaces/IMigrator.sol",
+      "exportedSymbols": {
+        "IMigrator": [
+          1816
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1810,
+        "name": "PragmaDirective",
+        "src": "33:25:5"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1816
+          ],
+          "name": "IMigrator",
+          "scope": 1817
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "desiredLiquidity",
+              "scope": 1816,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1811,
+                "name": "ParameterList",
+                "src": "188:2:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1815,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1812,
+                        "name": "ElementaryTypeName",
+                        "src": "214:7:5"
+                      }
+                    ],
+                    "id": 1813,
+                    "name": "VariableDeclaration",
+                    "src": "214:7:5"
+                  }
+                ],
+                "id": 1814,
+                "name": "ParameterList",
+                "src": "213:9:5"
+              }
+            ],
+            "id": 1815,
+            "name": "FunctionDefinition",
+            "src": "163:60:5"
+          }
+        ],
+        "id": 1816,
+        "name": "ContractDefinition",
+        "src": "60:165:5"
+      }
+    ],
+    "id": 1817,
+    "name": "SourceUnit",
+    "src": "33:192:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-12T00:57:27.094Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

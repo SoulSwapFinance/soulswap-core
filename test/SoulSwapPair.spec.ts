@@ -1,25 +1,24 @@
 import chai, { expect } from 'chai'
 import { Contract } from 'ethers'
-import { solidity, MockProvider, createFixtureLoader } from 'ethereum-waffle'
-import { BigNumber, bigNumberify } from 'ethers/utils'
-
+// import { solidity, MockProvider, createFixtureLoader } from '@nomiclabs/buidler-web3'
+import { BigNumber } from '@ethersproject/bignumber' // missing: bigNumberify
 import { expandTo18Decimals, mineBlock, encodePrice } from './shared/utilities'
 import { pairFixture } from './shared/fixtures'
-import { AddressZero } from 'ethers/constants'
+import { AddressZero } from '@ethersproject/constants'
 
 const MINIMUM_LIQUIDITY = bigNumberify(10).pow(3)
 
 chai.use(solidity)
 
 const overrides = {
-  gasLimit: 9999999
+  gasLimit: 9999999,
 }
 
 describe('SoulSwapPair', () => {
   const provider = new MockProvider({
     hardfork: 'istanbul',
     mnemonic: 'horn horn horn horn horn horn horn horn horn horn horn horn',
-    gasLimit: 9999999
+    gasLimit: 9999999,
   })
   const [wallet, other] = provider.getWallets()
   const loadFixture = createFixtureLoader(provider, [wallet])
@@ -76,8 +75,8 @@ describe('SoulSwapPair', () => {
 
     [1, 10, 10, '907437715948354246'],
     [1, 100, 100, '988138378977801540'],
-    [1, 1000, 1000, '997004989020957084']
-  ].map(a => a.map(n => (typeof n === 'string' ? bigNumberify(n) : expandTo18Decimals(n))))
+    [1, 1000, 1000, '997004989020957084'],
+  ].map((a) => a.map((n) => (typeof n === 'string' ? bigNumberify(n) : expandTo18Decimals(n))))
   swapTestCases.forEach((swapTestCase, i) => {
     it(`getInputPrice:${i}`, async () => {
       const [swapAmount, token0Amount, token1Amount, expectedOutputAmount] = swapTestCase
@@ -94,8 +93,8 @@ describe('SoulSwapPair', () => {
     ['998000000000000000', 5, 10, 1], // given amountIn, amountOut = floor(amountIn * .998)
     ['998000000000000000', 10, 5, 1],
     ['998000000000000000', 5, 5, 1],
-    [1, 5, 5, '1002004008016032065'] // given amountOut, amountIn = ceiling(amountOut / .998)
-  ].map(a => a.map(n => (typeof n === 'string' ? bigNumberify(n) : expandTo18Decimals(n))))
+    [1, 5, 5, '1002004008016032065'], // given amountOut, amountIn = ceiling(amountOut / .998)
+  ].map((a) => a.map((n) => (typeof n === 'string' ? bigNumberify(n) : expandTo18Decimals(n))))
   optimisticTestCases.forEach((optimisticTestCase, i) => {
     it(`optimistic:${i}`, async () => {
       const [outputAmount, token0Amount, token1Amount, inputAmount] = optimisticTestCase

@@ -1,8 +1,8 @@
 import chai, { expect } from 'chai'
 import { Contract } from 'ethers'
-import { MaxUint256 } from 'ethers/constants'
+import { solidity, MockProvider, deployContract } from 'ethereum-wallet'
+import { MaxUint256 } from '@ethersproject/constants'
 import { bigNumberify, hexlify, keccak256, defaultAbiCoder, toUtf8Bytes } from 'ethers/utils'
-import { solidity, MockProvider, deployContract } from 'ethereum-waffle'
 import { ecsign } from 'ethereumjs-util'
 
 import { expandTo18Decimals, getApprovalDigest } from './shared/utilities'
@@ -18,7 +18,7 @@ describe('SoulSwapERC20', () => {
   const provider = new MockProvider({
     hardfork: 'istanbul',
     mnemonic: 'horn horn horn horn horn horn horn horn horn horn horn horn',
-    gasLimit: 9999999
+    gasLimit: 9999999,
   })
   const [wallet, other] = provider.getWallets()
 
@@ -45,7 +45,7 @@ describe('SoulSwapERC20', () => {
             keccak256(toUtf8Bytes(name)),
             keccak256(toUtf8Bytes('1')),
             1,
-            token.address
+            token.address,
           ]
         )
       )

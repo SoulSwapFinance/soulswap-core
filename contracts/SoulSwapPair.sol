@@ -2,17 +2,13 @@
 
 pragma solidity >=0.5.16;
 
-import "./SoulSwapERC20.sol";
-import "./interfaces/ISoulSwapCallee.sol";
+import './SoulSwapERC20.sol';
+import './interfaces/ISoulSwapCallee.sol';
 import './interfaces/ISoulSwapPair.sol';
-import "./interfaces/ISoulSwapFactory.sol";
-import "./libraries/IERC20.sol";
-import "./libraries/UQ112x112.sol";
-
-interface IMigrator {
-    // Return the desired amount of liquidity token that the migrator wants.
-    function desiredLiquidity() external view returns (uint256);
-}
+import './interfaces/ISoulSwapFactory.sol';
+import './interfaces/IERC20.sol';
+import './libraries/UQ112x112.sol';
+import './interfaces/IMigrator.sol';
 
 contract SoulSwapPair is ISoulSwapPair, SoulSwapERC20 {
     using SafeMath for uint;
