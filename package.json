@@ -1,7 +1,7 @@
 {
   "name": "soulswap-core",
   "description": "🕯 Core contracts for the SoulSwap Exchange",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://soulswap.finance",
   "repository": {
     "type": "git",
