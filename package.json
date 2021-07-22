@@ -1,7 +1,7 @@
 {
   "name": "@soulswap/swap-core",
   "description": "🕯 Core contracts for the SoulSwap Exchange",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://soulswap.finance",
   "repository": {
     "type": "git",
@@ -18,10 +18,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "lint": "yarn prettier ./test/*.ts --check",
-    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "build": "truffle build",
     "clean": "rimraf ./build/",
     "compile": "truffle compile",
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
     "precompile": "yarn clean",
     "pretest": "yarn compile",
     "flat:factory": "truffle-flattener contracts/SoulSwapFactory.sol > flats/SoulSwapFactory_flat.sol",
@@ -33,11 +34,8 @@
     "@nomiclabs/buidler-truffle5": "^1.3.4",
     "@nomiclabs/buidler-waffle": "^2.0.0",
     "@nomiclabs/buidler-web3": "^1.3.4",
-    "@types/chai": "^4.2.21",
-    "@types/mocha": "^8.2.3",
     "chai": "^4.2.0",
     "ethereumjs-util": "^7.1.0",
-    "mocha": "^9.0.2",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "solc": "^0.5.16",
@@ -46,17 +44,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ethereumjs/block": "^3.4.0",
+    "@ethereumjs/vm": "^5.5.0",
     "@ethersproject/bignumber": "^5.4.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
-    "dotenv": "^10.0.0",
     "ethereum-wallet": "^0.0.6",
-    "ethereumjs-vm": "^4.2.0",
     "ethers": "^5.4.1",
-    "truffle": "^5.4.0",
+    "truffle": "^5.4.1",
     "truffle-flattener": "^1.5.0",
-    "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.4.0"
   }
 }
