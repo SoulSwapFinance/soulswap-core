@@ -23,7 +23,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.5.16;\n\ninterface IMigrator {\n    // Return the desired amount of liquidity token that the migrator wants.\n    function desiredLiquidity() external view returns (uint256);\n}",
-  "sourcePath": "/Users/unico/Documents/GitHub/SoulSwap/soulswap-core/contracts/interfaces/IMigrator.sol",
+  "sourcePath": "/Users/Uni/Documents/GitHub/soulswap/soulswap-core/contracts/interfaces/IMigrator.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/IMigrator.sol",
     "exportedSymbols": {
@@ -242,7 +242,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-12T00:57:27.094Z",
+  "updatedAt": "2021-07-22T08:22:40.052Z",
   "devdoc": {
     "methods": {}
   },

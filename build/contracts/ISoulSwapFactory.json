@@ -238,7 +238,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.5.0;\n\ninterface ISoulSwapFactory {\n    event PairCreated(address indexed token0, address indexed token1, address pair, uint);\n    event SetFeeTo(address indexed user, address indexed _feeTo);\n    event SetMigrator(address indexed user, address indexed _migrator);\n    event FeeToSetter(address indexed user, address indexed feeToSetter);\n\n    function feeTo() external view returns (address _feeTo);\n    function feeToSetter() external view returns (address _fee);\n    function migrator() external view returns (address _migrator);\n\n    function getPair(address tokenA, address tokenB) external view returns (address pair);\n\n    function createPair(address tokenA, address tokenB) external returns (address pair);\n    function setMigrator(address) external;\n    function setFeeTo(address) external;\n    function setFeeToSetter(address) external;\n}",
-  "sourcePath": "/Users/unico/Documents/GitHub/SoulSwap/soulswap-core/contracts/interfaces/ISoulSwapFactory.sol",
+  "sourcePath": "/Users/Uni/Documents/GitHub/soulswap/soulswap-core/contracts/interfaces/ISoulSwapFactory.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/ISoulSwapFactory.sol",
     "exportedSymbols": {
@@ -2217,7 +2217,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-12T00:57:27.098Z",
+  "updatedAt": "2021-07-22T08:22:40.054Z",
   "devdoc": {
     "methods": {}
   },

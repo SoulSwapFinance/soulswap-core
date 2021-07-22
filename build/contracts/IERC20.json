@@ -263,7 +263,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.5.0;\n\ninterface IERC20 {\n\n    // events\n    event Approval(address indexed owner, address indexed spender, uint value);\n    event Transfer(address indexed owner, address indexed spender, uint value);\n\n    // token details\n    function name() external view returns (string memory);\n    function symbol() external view returns (string memory);\n    function decimals() external view returns (uint8);\n    function totalSupply() external view returns (uint);\n\n    // address details\n    function balanceOf(address owner) external view returns (uint);\n    function allowance(address owner, address spender) external view returns (uint);\n    function getOwner() external view returns (address);\n\n    // token actions\n    function approve(address spender, uint value) external returns (bool);\n    function transfer(address recipient, uint value) external returns (bool);\n    function transferFrom(address sender, address recipient, uint value) external returns (bool);\n}\n",
-  "sourcePath": "/Users/unico/Documents/GitHub/SoulSwap/soulswap-core/contracts/interfaces/IERC20.sol",
+  "sourcePath": "/Users/Uni/Documents/GitHub/soulswap/soulswap-core/contracts/interfaces/IERC20.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/IERC20.sol",
     "exportedSymbols": {
@@ -2483,7 +2483,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-12T00:57:27.093Z",
+  "updatedAt": "2021-07-22T08:22:40.052Z",
   "devdoc": {
     "methods": {}
   },

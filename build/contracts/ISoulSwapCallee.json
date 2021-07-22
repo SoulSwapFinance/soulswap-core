@@ -38,7 +38,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.5.0;\n\ninterface ISoulSwapCallee {\n    function soulswapCall(\n        address sender,\n        uint amount0, \n        uint amount1, \n        bytes calldata data) external;\n}",
-  "sourcePath": "/Users/unico/Documents/GitHub/SoulSwap/soulswap-core/contracts/interfaces/ISoulSwapCallee.sol",
+  "sourcePath": "/Users/Uni/Documents/GitHub/soulswap/soulswap-core/contracts/interfaces/ISoulSwapCallee.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/ISoulSwapCallee.sol",
     "exportedSymbols": {
@@ -415,7 +415,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-12T00:57:27.095Z",
+  "updatedAt": "2021-07-22T08:22:40.053Z",
   "devdoc": {
     "methods": {}
   },
