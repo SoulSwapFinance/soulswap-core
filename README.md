@@ -1,2 +1,2 @@
-# soulswap-core
-🕯 Core smart contracts for the SoulSwap Decentralized Exchange on Fantom Network.
+# SoulSwap Core
+🕯 Core Smart Contracts for the SoulSwap Decentralized Exchange
